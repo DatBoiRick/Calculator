@@ -1,20 +1,31 @@
-def addition(a, b):
-    return a + b
+from CsvReader import CsvReader
 
-def subtraction(a, b):
-    a= int(a)
-    b= int(b)
-    c= b - a
+
+def add(a, b):
+    a = int(a)
+    b = int(b)
+    c = b + a
     return c
+
+
+def subtract(a, b):
+    a = int(a)
+    b = int(b)
+    c = b - a
+    return c
+
 
 def multiply(a, b):
     return a * b
 
+
 def divide(a, b):
     return a / b
 
+
 def square(a, b):
-    return a**b
+    return a ** b
+
 
 class Calculator:
     result = 0
@@ -23,11 +34,11 @@ class Calculator:
         pass
 
     def add(self, a, b):
-        self.result = addition(a, b)
+        self.result = add(a, b)
         return self.result
 
     def subtract(self, a, b):
-        self.result = subtraction(a, b)
+        self.result = subtract(a, b)
         return self.result
 
     def multiply(self, a, b):
@@ -42,6 +53,6 @@ class Calculator:
         self.result = square(a, b)
         return self.result
 
-    def square_root(self, x,):
+    def square_root(self, x, ):
         self.result = (x ** .5)
         return self.result

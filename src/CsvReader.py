@@ -1,8 +1,6 @@
 import csv
 from pprint import pprint
 
-from pip._internal.cli.cmdoptions import src
-
 
 def ClassFactory(class_name, dictionary):
     return type(class_name, (object,), dictionary)
