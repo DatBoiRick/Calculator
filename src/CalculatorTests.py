@@ -38,5 +38,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.square(5, 2), 25)
         self.assertEqual(calculator.result, 25)
 
+    def test_square_root_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.square_root(36), 6)
+        self.assertEqual(calculator.result, 6)
+
 if __name__ == '__main__':
     unittest.main()

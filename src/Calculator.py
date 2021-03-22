@@ -38,3 +38,7 @@ class Calculator:
     def square(self, a, b):
         self.result = square(a, b)
         return self.result
+
+    def square_root(self, x,):
+        self.result = (x ** .5)
+        return self.result
