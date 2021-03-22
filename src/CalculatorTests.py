@@ -1,7 +1,7 @@
 import unittest
-
 from Calculator import Calculator
-
+from CsvReader import CsvReader
+from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
 
@@ -19,8 +19,11 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 4)
 
     def test_subtract_method_calculator(self):
-        self.assertEqual(self.calculator.subtract(2, 2), 0)
-        self.assertEqual(self.calculator.result, 0)
+        test_data = CsvReader('/src/subtract.csv').data
+        pprint(test_data)
+
+        self.assertEqual(self.calculator.subtract(row['Value1'], row['Value2']), int(row['Result']))
+        self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_multiply_method_calculator(self):
         self.assertEqual(self.calculator.multiply(2, 2), 4)
