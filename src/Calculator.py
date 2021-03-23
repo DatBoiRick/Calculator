@@ -16,15 +16,30 @@ def subtract(a, b):
 
 
 def multiply(a, b):
-    return a * b
+    a = int(a)
+    b = int(b)
+    c = b * a
+    return c
 
 
 def divide(a, b):
-    return a / b
+    a = int(a)
+    b = int(b)
+    c = a / b
+    return c
 
 
 def square(a, b):
-    return a ** b
+    a = int(a)
+    b = int(b)
+    c = a ** b
+    return c
+
+
+def squareroot():
+    a = int(a)
+    c = a ** .5
+    return c
 
 
 class Calculator:
@@ -53,6 +68,6 @@ class Calculator:
         self.result = square(a, b)
         return self.result
 
-    def square_root(self, x, ):
-        self.result = (x ** .5)
+    def square_root(self, a, ):
+        self.result = (a ** .5)
         return self.result

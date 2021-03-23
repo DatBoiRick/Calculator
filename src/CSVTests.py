@@ -5,8 +5,10 @@ from pprint import pprint
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('add.csv')
-        pprint(self.data)
+        self.csv_reader = CsvReader('subtract.csv')
+
+    def setUp(self) -> None:
+        self.csv_reader = CsvReader('multiply.csv')
 
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_class('person')
