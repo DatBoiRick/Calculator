@@ -4,11 +4,9 @@ from pprint import pprint
 
 
 class MyTestCase(unittest.TestCase):
-
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('subtract.csv')
         self.csv_reader = CsvReader('add.csv')
-        pprint(self,data)
+        pprint(self.data)
 
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_class('person')
