@@ -36,7 +36,7 @@ def square(a, b):
     return c
 
 
-def squareroot():
+def square_root():
     a = int(a)
     c = a ** .5
     return c
