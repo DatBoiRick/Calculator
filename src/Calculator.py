@@ -29,14 +29,13 @@ def divide(a, b):
     return c
 
 
-def square(a, b):
+def square(a):
     a = int(a)
-    b = int(b)
-    c = a ** b
+    c = a ** 2
     return c
 
 
-def square_root():
+def square_root(a):
     a = int(a)
     c = a ** .5
     return c
@@ -64,10 +63,10 @@ class Calculator:
         self.result = divide(a, b)
         return self.result
 
-    def square(self, a, b):
-        self.result = square(a, b)
+    def square(self, a):
+        self.result = square(a)
         return self.result
 
-    def square_root(self, a, ):
-        self.result = (a ** .5)
+    def square_root(self, a):
+        self.result = square_root(a)
         return self.result
